@@ -15,11 +15,11 @@ module.exports = {
   const asyncFn = async function(){
   try {
     const response = await axios.request(options);
-    res.json(response.data);
-  } catch (error) {
-    console.log(error);
+    res.status(200).json(response.data);
+  } catch (err) {
+    console.log(err);
     res.status(404).send('Error fetching joke from API');
   }}
   asyncFn()
-  },
+  }
 }
