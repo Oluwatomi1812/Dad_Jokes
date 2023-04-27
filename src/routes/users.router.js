@@ -1,11 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-const {jokes, jokesBySearch} = require('../controllers/users.controller')
+const {jokes} = require('../controllers/users.controller')
 
-//Jokes by Search
-router.get('/joke', jokes)
-
-router.get('/search', jokesBySearch)
+router.get('/joke', jokes) 
 
 module.exports = router
